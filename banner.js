@@ -30,7 +30,6 @@ RollingBanner.prototype = {
         //this._$banners = $(selector).children(".container"); 
         this._$banners = $(selector).children("img"); 
         console.log("AA", this._$banners);
-
         this._bannerHeight = this._$banners.eq(0).height(); 
     }, 
         
@@ -40,8 +39,9 @@ RollingBanner.prototype = {
         // 롤링 배너 위치값 자동 설정하기 위해 높이 값 구하기 
         // 이미지와 같은 리소스까지 모두 읽어들여야 높이값을 구할 수 있기 때문에 onload 이벤트를 이용 
         //console.log("VVV",this._$banners.eq(0));
-        this._$banners.eq(0).on('load', function () { 
-            console.log("AIII");
+        console.log("INITIALIZED");
+        this._$banners.on('load', function () { 
+            console.log("LOADED");
             _self._bannerHeight = $(this).height();
             console.log("HELLO", _self._bannerHeight); 
             _self._start(); 

@@ -42,7 +42,6 @@
 .txt{
     display: block;
     position: relative;
-    overflow: hidden;
     height: 14px;
     margin-top: 18px;
     font-size: 14px;
